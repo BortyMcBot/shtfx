@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/shtfx/handbook-schema.json",
+  "title": "SHTFx Handbook Profile Schema",
+  "type": "object",
+  "required": [
+    "household_profile",
+    "location",
+    "threats",
+    "supplies",
+    "communications",
+    "evacuation",
+    "shelter_in_place",
+    "medical",
+    "skills",
+    "finances",
+    "community"
+  ],
+  "properties": {
+    "household_profile": {
+      "type": "object",
+      "required": ["members", "ages", "medical_needs", "pets"],
+      "properties": {
+        "members": { "type": "integer", "minimum": 1 },
+        "ages": { "type": "array", "items": { "type": "number" } },
+        "medical_needs": { "type": "array", "items": { "type": "string" } },
+        "pets": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "location": {
+      "type": "object",
+      "required": ["home_area", "bug_out_destinations", "regional_hazards"],
+      "properties": {
+        "home_area": { "type": "string" },
+        "bug_out_destinations": { "type": "array", "items": { "type": "string" } },
+        "regional_hazards": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "threats": {
+      "type": "object",
+      "required": ["ranked_likelihood"],
+      "properties": {
+        "ranked_likelihood": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "wildfire",
+              "earthquake",
+              "civil_unrest",
+              "grid_failure",
+              "water_supply",
+              "pandemic"
+            ]
+          }
+        }
+      }
+    },
+    "supplies": {
+      "type": "object",
+      "required": ["kit_72hr", "food_water_storage", "power_systems"],
+      "properties": {
+        "kit_72hr": { "type": "array", "items": { "type": "string" } },
+        "food_water_storage": { "type": "string" },
+        "power_systems": {
+          "type": "object",
+          "properties": {
+            "generator_type": { "type": "string" },
+            "generator_wattage": { "type": "number" },
+            "solar_specs": { "type": "string" }
+          }
+        }
+      }
+    },
+    "communications": {
+      "type": "object",
+      "required": ["out_of_area_contact", "rally_points", "comms_plan"],
+      "properties": {
+        "out_of_area_contact": { "type": "string" },
+        "rally_points": { "type": "array", "items": { "type": "string" } },
+        "comms_plan": { "type": "string" }
+      }
+    },
+    "evacuation": {
+      "type": "object",
+      "required": ["primary_route", "secondary_route", "vehicle_readiness", "go_bag_contents"],
+      "properties": {
+        "primary_route": { "type": "string" },
+        "secondary_route": { "type": "string" },
+        "vehicle_readiness": { "type": "string" },
+        "go_bag_contents": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "shelter_in_place": {
+      "type": "object",
+      "required": ["home_hardening", "water_storage", "power_backup"],
+      "properties": {
+        "home_hardening": { "type": "string" },
+        "water_storage": { "type": "string" },
+        "power_backup": { "type": "string" }
+      }
+    },
+    "medical": {
+      "type": "object",
+      "required": ["first_aid_capability", "medications", "special_needs"],
+      "properties": {
+        "first_aid_capability": { "type": "string" },
+        "medications": { "type": "array", "items": { "type": "string" } },
+        "special_needs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "skills": {
+      "type": "object",
+      "required": ["first_aid_certs", "fire", "navigation", "food_production", "self_defense"],
+      "properties": {
+        "first_aid_certs": { "type": "array", "items": { "type": "string" } },
+        "fire": { "type": "string" },
+        "navigation": { "type": "string" },
+        "food_production": { "type": "string" },
+        "self_defense": { "type": "string" }
+      }
+    },
+    "finances": {
+      "type": "object",
+      "required": ["cash_on_hand", "document_copies", "insurance"],
+      "properties": {
+        "cash_on_hand": { "type": "number" },
+        "document_copies": { "type": "array", "items": { "type": "string" } },
+        "insurance": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "community": {
+      "type": "object",
+      "required": ["neighbors", "local_resources", "mutual_aid"],
+      "properties": {
+        "neighbors": { "type": "array", "items": { "type": "string" } },
+        "local_resources": { "type": "array", "items": { "type": "string" } },
+        "mutual_aid": { "type": "string" }
+      }
+    }
+  }
+}

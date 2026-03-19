@@ -1,0 +1,21 @@
+# Personal/sensitive profile inputs
+profile.json
+**/profile.json
+
+# Personal exports and accidental drops
+*.key
+*.pem
+*.p12
+*.pfx
+*.sqlite
+*.db
+
+# Environment files
+.env
+.env.*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
