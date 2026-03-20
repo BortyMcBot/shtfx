@@ -1,8 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/shtfx/handbook-schema.json",
-  "title": "SHTFx Handbook Profile Schema",
+  "$id": "https://github.com/BortyMcBot/shtfx/schema/handbook-schema.json",
+  "title": "SHTFx Household Survival Handbook Schema",
   "type": "object",
+  "additionalProperties": false,
   "required": [
     "household_profile",
     "location",
@@ -19,30 +20,73 @@
   "properties": {
     "household_profile": {
       "type": "object",
-      "required": ["members", "ages", "medical_needs", "pets"],
+      "additionalProperties": false,
       "properties": {
-        "members": { "type": "integer", "minimum": 1 },
-        "ages": { "type": "array", "items": { "type": "number" } },
-        "medical_needs": { "type": "array", "items": { "type": "string" } },
-        "pets": { "type": "array", "items": { "type": "string" } }
-      }
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "age": { "type": "number" },
+              "role": { "type": "string" },
+              "medical_needs": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "required": ["name", "age"]
+          }
+        },
+        "pets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "name": { "type": "string" },
+              "special_needs": { "type": "string" }
+            },
+            "required": ["type", "name"]
+          }
+        },
+        "notes": { "type": "string" }
+      },
+      "required": ["members", "pets"]
     },
     "location": {
       "type": "object",
-      "required": ["home_area", "bug_out_destinations", "regional_hazards"],
+      "additionalProperties": false,
       "properties": {
         "home_area": { "type": "string" },
-        "bug_out_destinations": { "type": "array", "items": { "type": "string" } },
-        "regional_hazards": { "type": "array", "items": { "type": "string" } }
-      }
-    },
-    "threats": {
-      "type": "object",
-      "required": ["ranked_likelihood"],
-      "properties": {
-        "ranked_likelihood": {
+        "region": { "type": "string" },
+        "bug_out_destinations": {
           "type": "array",
           "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "distance_miles": { "type": "number" },
+              "type": { "type": "string" },
+              "notes": { "type": "string" }
+            },
+            "required": ["name"]
+          }
+        },
+        "regional_hazards": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["home_area", "bug_out_destinations", "regional_hazards"]
+    },
+    "threats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
             "type": "string",
             "enum": [
               "wildfire",
@@ -52,91 +96,161 @@
               "water_supply",
               "pandemic"
             ]
-          }
-        }
+          },
+          "likelihood_rank": { "type": "number" },
+          "impact": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "required": ["name", "likelihood_rank"]
       }
     },
     "supplies": {
       "type": "object",
-      "required": ["kit_72hr", "food_water_storage", "power_systems"],
+      "additionalProperties": false,
       "properties": {
-        "kit_72hr": { "type": "array", "items": { "type": "string" } },
-        "food_water_storage": { "type": "string" },
-        "power_systems": {
+        "kit_72hr": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "food_storage_days": { "type": "number" },
+        "water_storage_gallons": { "type": "number" },
+        "generator": {
           "type": "object",
           "properties": {
-            "generator_type": { "type": "string" },
-            "generator_wattage": { "type": "number" },
-            "solar_specs": { "type": "string" }
+            "type": { "type": "string" },
+            "rated_wattage": { "type": "number" },
+            "fuel_runtime_hours": { "type": "number" },
+            "notes": { "type": "string" }
+          }
+        },
+        "solar": {
+          "type": "object",
+          "properties": {
+            "capacity_watts": { "type": "number" },
+            "battery_storage_wh": { "type": "number" },
+            "notes": { "type": "string" }
           }
         }
-      }
+      },
+      "required": ["kit_72hr", "food_storage_days", "water_storage_gallons"]
     },
     "communications": {
       "type": "object",
-      "required": ["out_of_area_contact", "rally_points", "comms_plan"],
+      "additionalProperties": false,
       "properties": {
-        "out_of_area_contact": { "type": "string" },
-        "rally_points": { "type": "array", "items": { "type": "string" } },
+        "out_of_area_contact": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "location": { "type": "string" },
+            "phone": { "type": "string" },
+            "email": { "type": "string" }
+          }
+        },
+        "rally_points": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
         "comms_plan": { "type": "string" }
-      }
+      },
+      "required": ["out_of_area_contact", "rally_points", "comms_plan"]
     },
     "evacuation": {
       "type": "object",
-      "required": ["primary_route", "secondary_route", "vehicle_readiness", "go_bag_contents"],
+      "additionalProperties": false,
       "properties": {
         "primary_route": { "type": "string" },
         "secondary_route": { "type": "string" },
-        "vehicle_readiness": { "type": "string" },
-        "go_bag_contents": { "type": "array", "items": { "type": "string" } }
-      }
+        "vehicle_readiness": {
+          "type": "object",
+          "properties": {
+            "primary_vehicle": { "type": "string" },
+            "fuel_range_miles": { "type": "number" },
+            "maintenance_status": { "type": "string" }
+          }
+        },
+        "go_bag_contents": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary_route", "secondary_route", "vehicle_readiness", "go_bag_contents"]
     },
     "shelter_in_place": {
       "type": "object",
-      "required": ["home_hardening", "water_storage", "power_backup"],
+      "additionalProperties": false,
       "properties": {
-        "home_hardening": { "type": "string" },
-        "water_storage": { "type": "string" },
+        "home_hardening": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "water_storage_plan": { "type": "string" },
         "power_backup": { "type": "string" }
-      }
+      },
+      "required": ["home_hardening", "water_storage_plan", "power_backup"]
     },
     "medical": {
       "type": "object",
-      "required": ["first_aid_capability", "medications", "special_needs"],
+      "additionalProperties": false,
       "properties": {
         "first_aid_capability": { "type": "string" },
-        "medications": { "type": "array", "items": { "type": "string" } },
-        "special_needs": { "type": "array", "items": { "type": "string" } }
-      }
+        "medications": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "special_needs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["first_aid_capability", "medications", "special_needs"]
     },
     "skills": {
       "type": "object",
-      "required": ["first_aid_certs", "fire", "navigation", "food_production", "self_defense"],
+      "additionalProperties": false,
       "properties": {
-        "first_aid_certs": { "type": "array", "items": { "type": "string" } },
+        "first_aid_certs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
         "fire": { "type": "string" },
         "navigation": { "type": "string" },
         "food_production": { "type": "string" },
         "self_defense": { "type": "string" }
-      }
+      },
+      "required": ["first_aid_certs", "fire", "navigation", "food_production", "self_defense"]
     },
     "finances": {
       "type": "object",
-      "required": ["cash_on_hand", "document_copies", "insurance"],
+      "additionalProperties": false,
       "properties": {
         "cash_on_hand": { "type": "number" },
-        "document_copies": { "type": "array", "items": { "type": "string" } },
-        "insurance": { "type": "array", "items": { "type": "string" } }
-      }
+        "document_copies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "insurance": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["cash_on_hand", "document_copies", "insurance"]
     },
     "community": {
       "type": "object",
-      "required": ["neighbors", "local_resources", "mutual_aid"],
+      "additionalProperties": false,
       "properties": {
-        "neighbors": { "type": "array", "items": { "type": "string" } },
-        "local_resources": { "type": "array", "items": { "type": "string" } },
+        "neighbors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "local_resources": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
         "mutual_aid": { "type": "string" }
-      }
+      },
+      "required": ["neighbors", "local_resources", "mutual_aid"]
     }
   }
 }

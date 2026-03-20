@@ -1,17 +1,31 @@
 # Research Notes
 
-Store one file per topic using this pattern:
+Research notes should be stored as **one file per topic**, with the filename including a date so the freshness of the information is obvious.
 
-`YYYY-MM-DD-topic.md`
+## Recommended structure
 
-Example:
-- `2026-03-19-wildfire-evac-routes.md`
-- `2026-03-20-water-storage-options.md`
+- `wildfire-evacuation-2026-03-20.md`
+- `water-storage-2026-03-20.md`
+- `generator-fuel-safety-2026-03-20.md`
+- `regional-hazards-tucson-2026-03-20.md`
+
+## Suggested note format
 
 Each note should include:
-1. Topic and scope
-2. Key findings
-3. Actionable recommendations for the household handbook
-4. Source list (URLs, publication dates, agencies)
 
-Keep notes factual and source-backed. Distinguish verified guidance from assumptions.
+1. **Topic**
+2. **Date captured**
+3. **Summary**
+4. **Key facts**
+5. **Actionable implications for the handbook**
+6. **Sources**
+
+## Source guidance
+
+- Prefer primary or authoritative sources when possible.
+- Keep URLs, publication names, and access dates.
+- If facts may age quickly, include a reminder to re-check them periodically.
+
+## Privacy guidance
+
+Research notes in this public repo should stay generic and non-personal. Household-specific conclusions should be kept in a private profile/content repo.

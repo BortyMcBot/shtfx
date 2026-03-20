@@ -1,21 +1,16 @@
-# Personal/sensitive profile inputs
+node_modules/
+.DS_Store
 profile.json
-**/profile.json
-
-# Personal exports and accidental drops
+*.env
 *.key
 *.pem
 *.p12
-*.pfx
+*.mobileconfig
+*.bak
+*.tmp
+*.swp
+personal/
+private/
+secrets/
 *.sqlite
 *.db
-
-# Environment files
-.env
-.env.*
-
-# OS/editor noise
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
