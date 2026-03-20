@@ -1,0 +1,177 @@
+{
+  "household_profile": {
+    "members": [
+      {
+        "name": "Avery Holloway",
+        "age": 38,
+        "role": "household lead",
+        "medical_needs": []
+      },
+      {
+        "name": "Jordan Holloway",
+        "age": 36,
+        "role": "communications lead",
+        "medical_needs": ["seasonal asthma inhaler"]
+      },
+      {
+        "name": "Milo Holloway",
+        "age": 9,
+        "role": "child",
+        "medical_needs": []
+      }
+    ],
+    "pets": [
+      {
+        "type": "dog",
+        "name": "Comet",
+        "special_needs": "daily medication with food"
+      }
+    ],
+    "notes": "Fictional sample household for demonstration only."
+  },
+  "location": {
+    "home_area": "North Briar, CO",
+    "region": "Front Range Metro",
+    "bug_out_destinations": [
+      {
+        "name": "Pine Creek Cabin",
+        "distance_miles": 74,
+        "type": "family cabin",
+        "notes": "Primary fallback location with seasonal access considerations."
+      },
+      {
+        "name": "Mesa Junction Hotel",
+        "distance_miles": 28,
+        "type": "temporary lodging",
+        "notes": "Secondary fallback for short-term displacement."
+      }
+    ],
+    "regional_hazards": ["wildfire", "winter storm", "grid failure"]
+  },
+  "threats": [
+    {
+      "name": "wildfire",
+      "likelihood_rank": 1,
+      "impact": "Fast evacuation risk during dry windy periods.",
+      "notes": "Monitor air quality and pre-evacuation warnings."
+    },
+    {
+      "name": "grid_failure",
+      "likelihood_rank": 2,
+      "impact": "Heating, communications, and refrigeration disruption.",
+      "notes": "Layered battery and generator backup required."
+    },
+    {
+      "name": "water_supply",
+      "likelihood_rank": 3,
+      "impact": "Short-term service interruption possible after infrastructure issues.",
+      "notes": "Stored water and filtration cover initial gap."
+    },
+    {
+      "name": "pandemic",
+      "likelihood_rank": 4,
+      "impact": "Extended supply-chain disruption and school/work changes.",
+      "notes": "Requires medicine rotation and isolation planning."
+    },
+    {
+      "name": "civil_unrest",
+      "likelihood_rank": 5,
+      "impact": "Traffic disruption and temporary access constraints.",
+      "notes": "Avoidance and shelter-in-place preferred."
+    },
+    {
+      "name": "earthquake",
+      "likelihood_rank": 6,
+      "impact": "Lower likelihood but still included in planning baseline.",
+      "notes": "Secure shelving and maintain shoes/flashlights bedside."
+    }
+  ],
+  "supplies": {
+    "kit_72hr": [
+      "3 household go-bags",
+      "pet evacuation kit",
+      "flashlights",
+      "battery bank",
+      "paper map",
+      "N95 masks"
+    ],
+    "food_storage_days": 14,
+    "water_storage_gallons": 42,
+    "generator": {
+      "type": "gasoline",
+      "rated_wattage": 4500,
+      "fuel_runtime_hours": 12,
+      "notes": "Stored with rotated treated fuel."
+    },
+    "solar": {
+      "capacity_watts": 400,
+      "battery_storage_wh": 2048,
+      "notes": "Portable panel plus battery station for communications and refrigeration support."
+    }
+  },
+  "communications": {
+    "out_of_area_contact": {
+      "name": "Naomi Voss",
+      "location": "Harbor Point, OR",
+      "phone": "555-010-4421",
+      "email": "naomi.voss@example.test"
+    },
+    "rally_points": [
+      "Mailbox cluster at end of block",
+      "Community library parking lot",
+      "Pine Creek Cabin"
+    ],
+    "comms_plan": "Text first, voice second, radio third. Check in at the top of each hour during active incidents."
+  },
+  "evacuation": {
+    "primary_route": "North via Ridge Parkway to Highway 18",
+    "secondary_route": "East via County Road 6 to Route 41",
+    "vehicle_readiness": {
+      "primary_vehicle": "2021 TrailRunner SUV",
+      "fuel_range_miles": 340,
+      "maintenance_status": "kept above half tank and serviced quarterly"
+    },
+    "go_bag_contents": [
+      "documents pouch",
+      "medications",
+      "clothing layers",
+      "water",
+      "snacks",
+      "headlamps",
+      "chargers",
+      "pet leash and food"
+    ]
+  },
+  "shelter_in_place": {
+    "home_hardening": [
+      "fire extinguishers on both floors",
+      "window security film",
+      "weather sealing",
+      "backup blackout curtains"
+    ],
+    "water_storage_plan": "Stored in stackable containers plus sealed cases; rotate every 6 months.",
+    "power_backup": "Battery station for essentials first, generator for refrigeration and climate control as needed."
+  },
+  "medical": {
+    "first_aid_capability": "Standard first aid, CPR-trained adult, compact trauma kit.",
+    "medications": ["albuterol inhaler", "children's fever reducer"],
+    "special_needs": ["child comfort items during evacuation"]
+  },
+  "skills": {
+    "first_aid_certs": ["Adult CPR/AED", "Basic First Aid"],
+    "fire": "comfortable with extinguisher use and basic fire response",
+    "navigation": "can navigate with offline maps and paper atlas",
+    "food_production": "small raised-bed gardening only",
+    "self_defense": "basic home-defense plan, no formal training"
+  },
+  "finances": {
+    "cash_on_hand": 800,
+    "document_copies": ["IDs", "insurance cards", "vehicle title copies", "medical summary"],
+    "insurance": ["homeowners", "auto", "health"]
+  },
+  "community": {
+    "neighbors": ["Household on west side", "Household across alley"],
+    "local_resources": ["urgent care clinic", "community recreation center", "volunteer radio club"],
+    "mutual_aid": "Informal neighbor text group for storms and outages."
+  }
+}

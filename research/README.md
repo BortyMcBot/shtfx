@@ -7,7 +7,7 @@ Research notes should be stored as **one file per topic**, with the filename inc
 - `wildfire-evacuation-2026-03-20.md`
 - `water-storage-2026-03-20.md`
 - `generator-fuel-safety-2026-03-20.md`
-- `regional-hazards-tucson-2026-03-20.md`
+- `regional-hazards-example-region-2026-03-20.md`
 
 ## Suggested note format
 
