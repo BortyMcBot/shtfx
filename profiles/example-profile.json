@@ -2,20 +2,20 @@
   "household_profile": {
     "members": [
       {
-        "name": "Avery Holloway",
-        "age": 38,
+        "name": "Adult 1",
+        "age": 40,
         "role": "household lead",
         "medical_needs": []
       },
       {
-        "name": "Jordan Holloway",
-        "age": 36,
+        "name": "Adult 2",
+        "age": 38,
         "role": "communications lead",
-        "medical_needs": ["seasonal asthma inhaler"]
+        "medical_needs": ["maintenance inhaler"]
       },
       {
-        "name": "Milo Holloway",
-        "age": 9,
+        "name": "Child 1",
+        "age": 10,
         "role": "child",
         "medical_needs": []
       }
@@ -23,25 +23,25 @@
     "pets": [
       {
         "type": "dog",
-        "name": "Comet",
+        "name": "Pet 1",
         "special_needs": "daily medication with food"
       }
     ],
-    "notes": "Fictional sample household for demonstration only."
+    "notes": "Fictional sample household for demonstration only. Replace every field with your own private data in your private repo."
   },
   "location": {
-    "home_area": "North Briar, CO",
-    "region": "Front Range Metro",
+    "home_area": "Example suburban area",
+    "region": "Example metro region",
     "bug_out_destinations": [
       {
-        "name": "Pine Creek Cabin",
-        "distance_miles": 74,
-        "type": "family cabin",
-        "notes": "Primary fallback location with seasonal access considerations."
+        "name": "Primary fallback location",
+        "distance_miles": 75,
+        "type": "family or friend property",
+        "notes": "Primary fallback location with access considerations."
       },
       {
-        "name": "Mesa Junction Hotel",
-        "distance_miles": 28,
+        "name": "Secondary fallback location",
+        "distance_miles": 30,
         "type": "temporary lodging",
         "notes": "Secondary fallback for short-term displacement."
       }
@@ -65,7 +65,7 @@
       "name": "water_supply",
       "likelihood_rank": 3,
       "impact": "Short-term service interruption possible after infrastructure issues.",
-      "notes": "Stored water and filtration cover initial gap."
+      "notes": "Stored water and filtration cover initial gaps."
     },
     {
       "name": "pandemic",
@@ -77,18 +77,18 @@
       "name": "civil_unrest",
       "likelihood_rank": 5,
       "impact": "Traffic disruption and temporary access constraints.",
-      "notes": "Avoidance and shelter-in-place preferred."
+      "notes": "Avoidance and shelter-in-place are usually preferred."
     },
     {
       "name": "earthquake",
       "likelihood_rank": 6,
       "impact": "Lower likelihood but still included in planning baseline.",
-      "notes": "Secure shelving and maintain shoes/flashlights bedside."
+      "notes": "Secure shelving and keep shoes and flashlights near beds."
     }
   ],
   "supplies": {
     "kit_72hr": [
-      "3 household go-bags",
+      "household go-bags",
       "pet evacuation kit",
       "flashlights",
       "battery bank",
@@ -111,25 +111,25 @@
   },
   "communications": {
     "out_of_area_contact": {
-      "name": "Naomi Voss",
-      "location": "Harbor Point, OR",
-      "phone": "555-010-4421",
-      "email": "naomi.voss@example.test"
+      "name": "Trusted contact",
+      "location": "Another region",
+      "phone": "555-010-0000",
+      "email": "trusted-contact@example.test"
     },
     "rally_points": [
-      "Mailbox cluster at end of block",
-      "Community library parking lot",
-      "Pine Creek Cabin"
+      "Immediate neighborhood meetup point",
+      "Secondary local meetup point",
+      "Primary fallback location"
     ],
     "comms_plan": "Text first, voice second, radio third. Check in at the top of each hour during active incidents."
   },
   "evacuation": {
-    "primary_route": "North via Ridge Parkway to Highway 18",
-    "secondary_route": "East via County Road 6 to Route 41",
+    "primary_route": "Primary regional route",
+    "secondary_route": "Secondary regional route",
     "vehicle_readiness": {
-      "primary_vehicle": "2021 TrailRunner SUV",
+      "primary_vehicle": "Primary household vehicle",
       "fuel_range_miles": 340,
-      "maintenance_status": "kept above half tank and serviced quarterly"
+      "maintenance_status": "kept above half tank and serviced on schedule"
     },
     "go_bag_contents": [
       "documents pouch",
@@ -144,7 +144,7 @@
   },
   "shelter_in_place": {
     "home_hardening": [
-      "fire extinguishers on both floors",
+      "fire extinguishers",
       "window security film",
       "weather sealing",
       "backup blackout curtains"
@@ -154,14 +154,14 @@
   },
   "medical": {
     "first_aid_capability": "Standard first aid, CPR-trained adult, compact trauma kit.",
-    "medications": ["albuterol inhaler", "children's fever reducer"],
-    "special_needs": ["child comfort items during evacuation"]
+    "medications": ["maintenance inhaler", "fever reducer"],
+    "special_needs": ["comfort items during evacuation"]
   },
   "skills": {
     "first_aid_certs": ["Adult CPR/AED", "Basic First Aid"],
     "fire": "comfortable with extinguisher use and basic fire response",
     "navigation": "can navigate with offline maps and paper atlas",
-    "food_production": "small raised-bed gardening only",
+    "food_production": "small-scale gardening only",
     "self_defense": "basic home-defense plan, no formal training"
   },
   "finances": {
@@ -170,8 +170,8 @@
     "insurance": ["homeowners", "auto", "health"]
   },
   "community": {
-    "neighbors": ["Household on west side", "Household across alley"],
-    "local_resources": ["urgent care clinic", "community recreation center", "volunteer radio club"],
-    "mutual_aid": "Informal neighbor text group for storms and outages."
+    "neighbors": ["Nearby household 1", "Nearby household 2"],
+    "local_resources": ["urgent care clinic", "community center", "volunteer radio group"],
+    "mutual_aid": "Informal local alert group for storms and outages."
   }
 }

@@ -40,6 +40,17 @@ The script will read `profile.json` and available research notes, then generate 
 ### 4. Review and harden
 Review the generated handbook for completeness, operational realism, and sensitive details before printing or sharing it.
 
+## How to use SHTFx for your family
+
+1. **Fork or clone this repo** to get the public generator, schema, question bank, and generic research guidance.
+2. **Create a separate private repo** for your household data and outputs, such as `shtfx-yourname`.
+3. **Run the intake Q&A** with your own Bort instance, another assistant, or by manually filling out `profile.json`.
+4. **Add household-specific research notes** in the private repo, especially anything tied to your geography, routes, local hazards, contacts, or supplies.
+5. **Run `generator/generate.js`** from your working copy to produce `handbook.md`.
+6. **Keep the private repo private.** Never commit personal data, real addresses, medical details, contact trees, or household-specific plans to this public repo.
+
+This public repo is the reusable toolkit. Your private repo is where your real preparedness data belongs.
+
 ## Repository layout
 
 - `schema/handbook-schema.json` — canonical handbook data structure
