@@ -27,20 +27,25 @@
         "special_needs": "daily medication with food"
       }
     ],
-    "notes": "Fictional sample household for demonstration only. Replace every field with your own private data in your private repo."
+    "notes": "Fictional sample household for demonstration only. Replace every field with your own private data in your private repo.",
+    "existing_prep": ["72hr_kit", "food_water_storage", "battery_backup"]
   },
   "location": {
     "home_area": "Example suburban area",
     "region": "Example metro region",
     "bug_out_destinations": [
       {
+        "priority": "primary",
         "name": "Primary fallback location",
+        "location": "Another county",
         "distance_miles": 75,
         "type": "family or friend property",
         "notes": "Primary fallback location with access considerations."
       },
       {
+        "priority": "secondary",
         "name": "Secondary fallback location",
+        "location": "Nearby rural edge",
         "distance_miles": 30,
         "type": "temporary lodging",
         "notes": "Secondary fallback for short-term displacement."
@@ -150,12 +155,14 @@
       "backup blackout curtains"
     ],
     "water_storage_plan": "Stored in stackable containers plus sealed cases; rotate every 6 months.",
-    "power_backup": "Battery station for essentials first, generator for refrigeration and climate control as needed."
+    "power_backup": "Battery station for essentials first, generator for refrigeration and climate control as needed.",
+    "strategy": "Shelter in place first unless the home becomes unsafe or utilities fail beyond backup capacity."
   },
   "medical": {
     "first_aid_capability": "Standard first aid, CPR-trained adult, compact trauma kit.",
     "medications": ["maintenance inhaler", "fever reducer"],
-    "special_needs": ["comfort items during evacuation"]
+    "special_needs": ["comfort items during evacuation"],
+    "notes": "No power-dependent medical devices in the household."
   },
   "skills": {
     "first_aid_certs": ["Adult CPR/AED", "Basic First Aid"],
