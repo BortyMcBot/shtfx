@@ -3,6 +3,11 @@
 ## Overview
 Earthquakes release energy stored in the earth's crust, producing ground shaking that can damage structures, utilities, transportation corridors, and communications.
 
+## 2026 refresh
+- USGS continues to emphasize using the live earthquake map, feeds, and area/time-window searches as the baseline awareness tools for real events.
+- In the broader Arizona-region query window used for this refresh, USGS reported dozens of small M1+ events over the prior 30 days, including minor Arizona events. That reinforces the right planning assumption for Arizona: severe shaking is less common than in California, but not zero, and preparation should focus on household disruption rather than cinematic collapse.
+- The practical takeaway is still boring and correct: secure furniture, know utility shutoffs, keep shoes/lights by beds, and plan for short-notice self-sufficiency after a utility interruption.
+
 ## Fault and shaking basics
 - **Strike-slip faults:** horizontal movement along a fault line
 - **Normal faults:** one block drops relative to another
@@ -43,3 +48,7 @@ Earthquake preparedness should emphasize:
 
 ## Planning guidance
 Secure heavy furniture, water heaters, and shelving before an event. Store critical items in multiple locations so one damaged room does not eliminate access to essentials. Build household plans around reunification, utility shutoff decisions, and short-notice self-sufficiency.
+
+## Sources checked
+- USGS Earthquake Hazards Program
+- USGS earthquake event query/feed for Arizona-region M1+ events in the last 30 days

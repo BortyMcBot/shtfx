@@ -3,6 +3,11 @@
 ## Overview
 Wildfires spread through a combination of fuel, weather, and topography. Dry vegetation, low humidity, high winds, and steep slopes can all accelerate fire movement and reduce the time available to react.
 
+## 2026 refresh
+- NIFC is already publishing 2026 wildfire readiness and aerial suppression preparation updates, which is a good reminder that households should treat wildfire planning as a pre-season task rather than a same-day reaction.
+- Seasonal readiness matters more than exact dates: clean up fuels early, review evacuation triggers, and make sure vehicle, masks, and document kits stay ready before the hottest stretch arrives.
+- For Southwest households, monitor local NWS forecast discussions, fire-weather pages, and county alert channels together rather than relying on a single app.
+
 ## How wildfires spread
 - **Surface fire:** burns grasses, leaves, brush, and low vegetation
 - **Ladder fuels:** allow fire to climb from low vegetation into shrubs and tree canopies
@@ -38,3 +43,7 @@ Wildfire evacuation bags should emphasize speed and irreplaceable items:
 
 ## Planning guidance
 Assume that wildfire evacuation can happen with limited warning. Favor a checklist that supports a fast exit over a complex loading plan. Pre-stage valuables, backup media, and essential documents so they can be grabbed quickly without slowing departure.
+
+## Sources checked
+- NIFC fire information page (2026 wildfire readiness updates)
+- NWS Tucson forecast hub (forecast discussion, hazards, HeatRisk, drought pages)

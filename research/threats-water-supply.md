@@ -3,6 +3,11 @@
 ## Overview
 Water service can fail because of contamination events, power loss, line breaks, treatment failures, drought restrictions, frozen infrastructure, or upstream supply interruption.
 
+## 2026 refresh
+- Arizona water planning remains tied to Colorado River operations and post-2026 rules. CAP is explicitly highlighting Colorado River conditions, drought adaptation, and the fact that the current shortage-sharing and drought contingency framework expires at the end of 2026.
+- The practical household takeaway is that long-horizon regional stress can coexist with short-horizon municipal reliability. Families still need storage and treatment plans for outages, advisories, and temporary pressure loss even when tap service feels routine.
+- For arid regions, stored-water assumptions should be heat-aware. One gallon per person per day is a floor, not a comfort target.
+
 ## Common disruption scenarios
 - boil-water advisories after contamination risk
 - pressure loss from line failures or pumping problems
@@ -23,3 +28,7 @@ Not all water problems are solved the same way. Some treatments handle biologica
 
 ## Planning guidance
 Store water in multiple container sizes rather than one giant reserve. Label fill dates, rotate supplies, and keep a simple rationing plan. Pair stored water with containers, purification methods, and sanitation supplies so the household can manage both drinking and hygiene during an extended disruption.
+
+## Sources checked
+- Central Arizona Project public water-supply and post-2026 operations updates
+- NWS Tucson drought information hub

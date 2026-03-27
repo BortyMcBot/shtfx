@@ -3,6 +3,11 @@
 ## Overview
 Grid failure can result from storms, equipment failure, fuel shortages, cyber incidents, wildfire shutoffs, heat stress, or cascading utility faults. Duration may range from a few hours to many days.
 
+## 2026 refresh
+- Ready.gov continues to frame outages as whole-community disruptions, not just a lighting problem: communications, water, transport, fuel, retail, and medication storage all get hit.
+- Their operational guidance remains solid and worth baking into any household plan: keep refrigerators/freezers closed, use generators only outdoors and away from windows, protect against carbon monoxide, and plan ahead for power-dependent medical needs.
+- The best household upgrade is still a prioritized load list: decide in advance what must stay powered, for how long, and by which backup source.
+
 ## What outages affect first
 Power outages often disrupt more than lighting:
 - refrigeration and freezer storage
@@ -35,3 +40,6 @@ Without power, refrigerated food becomes time-sensitive. Water access may also d
 
 ## Planning guidance
 List critical electrical loads by priority rather than trying to power everything. Identify what must run, for how long, and with what power source. Practice a short outage drill so the household learns where lighting, charging gear, and manual alternatives are kept.
+
+## Sources checked
+- Ready.gov power outage guidance
