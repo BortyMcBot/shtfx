@@ -56,7 +56,8 @@ This public repo is the reusable toolkit. Your private repo is where your real p
 - `schema/handbook-schema.json` — canonical handbook data structure
 - `questions/question-bank.json` — intake questions used to gather missing information
 - `research/README.md` — note-taking structure and sourcing guidance
-- `generator/generate.js` — handbook generation stub
+- `generator/generate.js` — handbook generator (also usable as a library, see `app/`)
+- `app/` — self-serve profile editor web app; see `app/README.md`
 
 ## Roadmap
 

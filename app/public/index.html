@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SHTFx Profile</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>SHTFx Household Profile</h1>
+    <span id="save-status" class="status">loaded</span>
+  </header>
+
+  <main>
+    <aside id="gaps-panel">
+      <h2>What's missing</h2>
+      <div id="gaps-list">Loading…</div>
+    </aside>
+
+    <div id="sections"></div>
+  </main>
+
+  <footer>
+    <button id="generate-btn">Regenerate handbook</button>
+    <pre id="handbook-output" hidden></pre>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

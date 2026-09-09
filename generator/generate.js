@@ -3,11 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const root = process.cwd();
-const profilePath = path.join(root, 'profile.json');
-const researchDir = path.join(root, 'research');
-const outputPath = path.join(root, 'handbook.md');
-
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
@@ -76,10 +71,13 @@ function addSection(lines, title, bodyLines) {
   lines.push('');
 }
 
-function main() {
+function generateHandbook(profileDir) {
+  const profilePath = path.join(profileDir, 'profile.json');
+  const researchDir = path.join(profileDir, 'research');
+  const outputPath = path.join(profileDir, 'handbook.md');
+
   if (!fs.existsSync(profilePath)) {
-    console.error('Missing profile.json in project root.');
-    process.exit(1);
+    throw new Error(`Missing profile.json in ${profileDir}`);
   }
 
   const profile = readJson(profilePath);
@@ -201,7 +199,21 @@ function main() {
   ]);
 
   fs.writeFileSync(outputPath, lines.join('\n'));
-  console.log(`Generated ${outputPath}`);
+  return outputPath;
 }
 
-main();
+function main() {
+  try {
+    const outputPath = generateHandbook(process.cwd());
+    console.log(`Generated ${outputPath}`);
+  } catch (err) {
+    console.error(err.message);
+    process.exit(1);
+  }
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { generateHandbook };
