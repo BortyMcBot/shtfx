@@ -46,4 +46,4 @@ Assume that wildfire evacuation can happen with limited warning. Favor a checkli
 
 ## Sources checked
 - NIFC fire information page (2026 wildfire readiness updates)
-- NWS Tucson forecast hub (forecast discussion, hazards, HeatRisk, drought pages)
+- NWS regional forecast hub (forecast discussion, hazards, HeatRisk, drought pages)
